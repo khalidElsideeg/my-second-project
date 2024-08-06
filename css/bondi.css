@@ -1,0 +1,324 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-to-top {
+  background-color: var(--dark-color);
+  display: inline-block;
+  padding: 5px 5px 3px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 2px;
+  display: none;
+}
+
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+
+.main-titel::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  position: absolute;
+  left: 50% !important;
+  transform: translateX(-50%);
+}
+
+/* Start navbr */
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .logo {
+  width: 70px;
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color);
+}
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+.navbar .search svg {
+  color: var(--green-color);
+}
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[airia-exppanded="true"] {
+  border-color: var(--green-color);
+}
+/* End navbr */
+
+/* Start fixed-menu */
+.fixed-menu {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 10px;
+  position: fixed;
+  height: 100%;
+  width: 245px;
+  left: -245px;
+  top: 73px;
+  z-index: 99;
+}
+.fixed-menu h3 {
+  margin-top: 10px;
+}
+.fixed-menu .fa-gear {
+  position: absolute;
+  background-color: var(--dark-color);
+  color: var(--green-color);
+  right: -29px;
+  top: 90px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+.fixed-menu a {
+  color: white;
+}
+.fixed-menu .change-colors li {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 10px;
+  z-index: 999;
+  position: absolute;
+}
+.fixed-menu .change-colors li [data-color="blue"] {
+  background-color: #3489db;
+}
+.fixed-menu .change-colors li [data-color="red"] {
+  background-color: #ff0000;
+}
+.fixed-menu .change-colors li [data-color="green"] {
+  background-color: #16a085;
+}
+.fixed-menu .change-colors li [data-color="purple"] {
+  background-color: #8e44ad;
+}
+/* End fixed-menu */
+
+/* Start landing */
+.landing {
+  background-color: var(--dark-color);
+  height: 400px;
+}
+/* End landing */
+
+/* Start features */
+.features svg {
+  color: var(--yellow-color);
+}
+.features .icon-holder .number {
+  color: var(--yellow-color);
+}
+.features .icon-holder .icon {
+  color: var(--green-color);
+}
+.features .feat h4 {
+  color: var(--yellow-color);
+}
+/* End features */
+
+/* Start our work */
+.our-work {
+  background-color: var(--section-color);
+}
+.our-work svg {
+  color: var(--yellow-color);
+}
+.our-work ul .acive {
+  color: var(--yellow-color);
+  background-color: var(--red-color);
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+}
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgb(51 209 204 / 76%);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+.box img {
+  width: 200px;
+  height: 150px;
+}
+.our-work .box .btn {
+  width: 200px;
+}
+/* End our work */
+
+/* Start stuff */
+.stuff svg {
+  color: var(--yellow-color);
+}
+.stuff .description {
+  max-width: 400px;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+}
+/* End stuff */
+
+/* Start team */
+.team {
+  background-color: var(--section-color);
+}
+.team h2 {
+  color: var(--yellow-color);
+}
+.team .box h4 {
+  background-color: var(--green-color);
+}
+/* End team */
+
+.project {
+  background-color: var(--dark-color);
+}
+
+/* start subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+  color: var(--dark-color);
+  height: 210px;
+}
+.subscribe .container {
+  padding: 25px;
+}
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+.subscribe input[type="submit"] {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+/* End subscribe */
+
+/* Start footer */
+.footer {
+  background-color: var(--dark-color);
+  margin-bottom: 0;
+}
+.footer .info img {
+  width: 100px;
+  height: 70px;
+}
+.footer .copyright > span {
+  color: var(--green-color);
+}
+.footer .copyright div span {
+  color: var(--yellow-color);
+}
+.footer .contact ul svg {
+  width: 30px;
+  height: 30px;
+}
+.footer .facebook {
+  background-color: #1877f2;
+  color: aliceblue;
+}
+.footer .twitter {
+  background-color: #1da1f2;
+  color: aliceblue;
+}
+.footer .linkedin {
+  background-color: #0077b5;
+  color: aliceblue;
+}
+.footer .youtube {
+  background-color: #ff0000;
+  color: aliceblue;
+}
+/* End footer */
+
+/* Start website thieme colors */
+
+[data-defualt-color="blue"] .skin-color {
+  color: #3489db;
+}
+[data-defualt-color="blue"] .skin-background {
+  background-color: #3489db;
+  color: white;
+}
+
+[data-defualt-color="red"] .skin-color {
+  color: #ff0000;
+}
+[data-defualt-color="red"] .skin-background {
+  background-color: #ff0000;
+  color: white;
+}
+
+[data-defualt-color="green"] .skin-color {
+  color: #16a085;
+}
+[data-defualt-color="green"] .skin-background {
+  background-color: #16a085;
+  color: white;
+}
+
+[data-defualt-color="purple"] .skin-color {
+  color: #8e44ad;
+}
+[data-defualt-color="purple"] .skin-background {
+  background-color: #8e44ad;
+  color: white;
+}
+/* Start website thieme colors */
